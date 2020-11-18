@@ -1,6 +1,7 @@
 # deep-copy-function
 
 Функция принимает значение произвольного типа данных (массив, объект, дату или примитив) и возвращает глубокую копию, т.е. само возвращаемое значение и его внутренние элементы независимы от принимаемого значения (учитывая то, что объекты копируются по ссылке).
+```javascript
 function clone(obj) {
     const isArray = value => Array.isArray(value);
     const isDate = value => Object.getPrototypeOf(value) === Date.prototype;
@@ -32,3 +33,4 @@ function clone(obj) {
     
     return cloneRecurse(obj);
 }
+```
