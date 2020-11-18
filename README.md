@@ -6,11 +6,11 @@ function clone(obj) {
     const isArray = value => Array.isArray(value);
     const isDate = value => Object.getPrototypeOf(value) === Date.prototype;
     const isRegExp = value => Object.getPrototypeOf(value) === RegExp.prototype;
-    const isObject = value => typeof value === 'object' && 
-    !isArray(value) && 
-    value !== null && 
-    !isDate(value) && 
-    !isRegExp(value);
+    const isObject = value => typeof value === 'object' &&
+        !isArray(value) &&
+        value !== null &&
+        !isDate(value) &&
+        !isRegExp(value);
 
     const cloneRecurse = (origin) => {
         let copy;
